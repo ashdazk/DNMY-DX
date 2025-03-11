@@ -1,6 +1,8 @@
 body {
     margin: 0px;
     background-color: #681111;
+    font-family: Arial, sans-serif;
+    color: #681111;
 }
 
 main {
@@ -8,12 +10,7 @@ main {
     margin-right: 20px;
 }
 
-h1 {
-    text-align: center;
-    color: #f0eded;
-}
-
-h3 {
+h1, h3 {
     text-align: center;
     color: #f0eded;
 }
@@ -42,26 +39,11 @@ h3 {
     float: left;
 }
 
-/* CARD */
-body {
-    font-family: Arial, sans-serif;
-    color: #681111;
-}
-
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.navbar li {
-    display: inline;
-    margin-right: 10px;
-}
-
 .card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .card {
@@ -71,7 +53,8 @@ body {
     padding: 20px;
     text-align: center;
     cursor: pointer;
-    width: 410px; /* Set a fixed width for the cards */
+    width: 100%; /* Set width to 100% */
+    max-width: 410px; /* Set max-width to 410px */
     box-shadow: 0 2px 5px rgba(75, 74, 74, 0.1);
     height: auto; /* Set height to auto to fit content */
     display: flex;
@@ -105,12 +88,19 @@ body {
 .card p {
     font-size: small;
     color: #181616;
-    margin: 0; /* Ensure no extra margin */
+    margin: 0; 
 }
 
-/* IPI ICON */
+/*icon*/
 .card-image {
     max-width: 150px; 
     height: auto;
     margin-right: 5px; 
+}
+
+
+@media (max-width: 767px) {
+    .card {
+        width: 100%; /* 1 card per row */
+    }
 }
